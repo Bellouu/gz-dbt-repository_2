@@ -34,3 +34,15 @@ sources:
             tests:
             - unique
             - not_null
+      - name: adwords
+        description: adwords data for Greenweez orders
+        identifier: raw_gz_adwords
+      - name: bing
+        description: bing data for Greenweez orders
+        identifier: raw_gz_bing
+      - name: criteo
+        description: criteo data for Greenweez orders
+        identifier: raw_gz_criteo
+      - name: facebook
+        description: facebook for Greenweez orders
+        identifier: raw_gz_facebook
