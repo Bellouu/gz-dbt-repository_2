@@ -37,12 +37,33 @@ sources:
       - name: adwords
         description: adwords data for Greenweez orders
         identifier: raw_gz_adwords
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       - name: bing
         description: bing data for Greenweez orders
         identifier: raw_gz_bing
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       - name: criteo
         description: criteo data for Greenweez orders
         identifier: raw_gz_criteo
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       - name: facebook
         description: facebook for Greenweez orders
         identifier: raw_gz_facebook
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+
+models:     
+    - name: int_campaigns_day
+      description: campaign by day
+      tests:
+      - unique:
+          column_name: date_date
+      - not_null:
+           column_name: date_date
