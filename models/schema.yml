@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: raw          # alias du dataset gz_raw_data
-    database: ton_projet_bigquery
+    database: gz_raw_data
     schema: gz_raw_data   # nom réel du dataset dans BigQuery
     tables:
       - name: sales       # alias dbt
